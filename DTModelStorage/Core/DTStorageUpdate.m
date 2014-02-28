@@ -119,7 +119,7 @@
     {
         return NO;
     }
-    if (![self.movedRowIndexPaths isEqualToArray:update.movedRowIndexPaths])
+    if (![self.movedRowIndexPaths isEqualToDictionary:update.movedRowIndexPaths])
     {
         return NO;
     }
