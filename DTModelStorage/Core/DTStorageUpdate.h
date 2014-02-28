@@ -59,4 +59,6 @@
  */
 @property (nonatomic, strong) NSMutableArray *updatedRowIndexPaths;
 
+@property (nonatomic, strong) NSMutableDictionary *movedRowIndexPaths;
+
 @end

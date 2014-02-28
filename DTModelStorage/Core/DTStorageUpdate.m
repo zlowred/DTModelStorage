@@ -81,6 +81,14 @@
     return _updatedRowIndexPaths;
 }
 
+-(NSMutableDictionary *)movedRowIndexPaths {
+    if (!_movedRowIndexPaths)
+    {
+        _movedRowIndexPaths = [NSMutableDictionary dictionary];
+    }
+    return _movedRowIndexPaths;
+}
+
 -(BOOL)isEqual:(DTStorageUpdate *)update
 {
     if (![update isKindOfClass:[DTStorageUpdate class]])
@@ -111,7 +119,11 @@
     {
         return NO;
     }
-    
+    if (![self.movedRowIndexPaths isEqualToArray:update.movedRowIndexPaths])
+    {
+        return NO;
+    }
+
     return YES;
 }
 
